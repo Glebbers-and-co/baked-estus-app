@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { type FC } from 'react';
 
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
-import { BulletedList, InlineLink, ListItem } from '@/src/components/ui/kit';
+import { BulletedList, ListItem } from '@/src/components/ui/kit';
 import Heading from '@/src/components/ui/kit/Heading/Heading';
 
 import styles from './DesignSystem.module.scss';
