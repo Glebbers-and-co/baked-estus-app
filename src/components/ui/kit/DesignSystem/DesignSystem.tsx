@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { type FC } from 'react';
 
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
-import { BulletedList, ListItem } from '@/src/components/ui/kit';
+import { BulletedList, ListItem, NumberedList } from '@/src/components/ui/kit';
 import Heading from '@/src/components/ui/kit/Heading/Heading';
 
 import styles from './DesignSystem.module.scss';
@@ -48,6 +48,20 @@ const DesignSystem: FC<DesignSystemProps> = () => {
               <ListItem>Отступ от маркера 8 пикселей</ListItem>
               <ListItem>Отступ от абзаца 16 пикселей</ListItem>
             </BulletedList>
+          </div>
+
+          <div className={cn(styles.part)}>
+            <Heading as={'h3'}>Нумерованный</Heading>
+
+            <NumberedList>
+              <ListItem>Номер вынесен</ListItem>
+              <ListItem>Номер обернут блоком 20 рх</ListItem>
+              <ListItem>Кегль номера такой же, как у текста</ListItem>
+              <ListItem>Начертание номера жирное</ListItem>
+              <ListItem>Начертание номера жирное</ListItem>
+              <ListItem>Отступ от номера 8 пикселей</ListItem>
+              <ListItem>Отступ от абзаца 16 пикселей</ListItem>
+            </NumberedList>
           </div>
         </div>
       </article>

@@ -2,17 +2,32 @@
 
 ul, ol {
   &.list {
+    padding-left: var(--p-level-4);
+
     // Numbered list
     &:is(ol) {
+      padding-left: calc(var(--p-level-4) * 2);
+
       li {
-        list-style: inside decimal;
+        list-style: outside;
+        padding-left: 8px;
+
+        &::marker {
+          @apply text-accent font-bold;
+        }
+
+        @include endAt($tabletBreakpoint) {
+          padding-left: 4px;
+        }
+      }
+
+      @include endAt($tabletBreakpoint) {
+        padding-left: calc(var(--p-level-4) * 3);
       }
     }
 
     // Bulleted list
     &:is(ul) {
-      padding-left: var(--p-level-4);
-
       li {
         @apply flex items-start;
 
