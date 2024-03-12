@@ -18,10 +18,12 @@ const DesignSystem: FC<DesignSystemProps> = () => {
       margin={'0px'}
       className={cn('bg-red-400', styles.designSystem)}
     >
-      <Heading as={'h1'}>Design-system</Heading>
+      <Heading as={'h1'}>Дизайн-система</Heading>
 
       <article>
-        <Heading as={'h2'}>Paddings</Heading>
+        <Heading as={'h2'}>Отступы</Heading>
+
+        <p>В адаптиве все отступы спускаются на уровень ниже</p>
       </article>
     </UiContainer>
   );

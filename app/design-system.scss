@@ -16,8 +16,16 @@ body {
     --p-level-5:  .4rem; //  8px
   }
 
+  // Font sizes
   --p1: 1.2rem; // 24px
   --p2:   1rem; // 20px
   --p3:  .8rem; // 16px
   --p4:  .7rem; // 14px
+
+  @include endAt($tabletBreakpoint) {
+    --p1:   1rem; // 20px
+    --p2:  .8rem; // 16px
+    --p3:  .7rem; // 14px
+    --p4:  .7rem; // 14px
+  }
 }

@@ -1,7 +1,13 @@
+@import "src/styles/templates";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   font-size: 20px;
+}
+
+* {
+  @include p16;
 }

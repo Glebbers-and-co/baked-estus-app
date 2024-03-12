@@ -1,4 +1,6 @@
 .heading {
+  line-height: normal;
+
   &:is(h1) {
     @apply text-[1.6rem] font-[600];
   }
