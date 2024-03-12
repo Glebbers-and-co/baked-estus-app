@@ -36,14 +36,17 @@ const DesignSystem: FC<DesignSystemProps> = () => {
       </article>
 
       <article>
-        <Heading as={'h2'}>Текст</Heading>
+        <Heading as={'h2'}>Списки</Heading>
 
         <div className={cn(styles.subGroup)}>
           <div className={cn(styles.part)}>
-            <Heading as={'h3'}>Шрифты</Heading>
+            <Heading as={'h3'}>Маркерованный</Heading>
 
             <BulletedList>
-              <ListItem>Основной шрифт - futura pt</ListItem>
+              <ListItem>Маркера контрастного цвета</ListItem>
+              <ListItem>10 пикселей диаметр</ListItem>
+              <ListItem>Отступ от маркера 8 пикселей</ListItem>
+              <ListItem>Отступ от абзаца 16 пикселей</ListItem>
             </BulletedList>
           </div>
         </div>
