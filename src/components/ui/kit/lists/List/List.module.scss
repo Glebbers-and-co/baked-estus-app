@@ -9,7 +9,7 @@ ul, ol {
       padding-left: calc(var(--p-level-4) * 2);
 
       li {
-        list-style: outside;
+        list-style: outside decimal;
         padding-left: 8px;
 
         &::marker {
