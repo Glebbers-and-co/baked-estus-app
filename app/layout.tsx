@@ -8,6 +8,7 @@ import { useEnv } from '@/src/hooks/use-env';
 import { generateStaticMetadata } from '@/src/utils/seo';
 
 import { AppConstants } from './app.constants';
+import './design-system.scss';
 import './globals.scss';
 
 const mainFont = Inter({ subsets: ['latin'] });

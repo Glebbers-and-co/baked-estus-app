@@ -1,0 +1,17 @@
+ul, ol {
+  &.list {
+    // Numbered list
+    &:is(ol) {
+      li {
+        list-style: inside decimal;
+      }
+    }
+
+    // Bulleted list
+    &:is(ul) {
+      li {
+        list-style: inside disc;
+      }
+    }
+  }
+}

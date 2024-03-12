@@ -1,0 +1,21 @@
+.heading {
+  &:is(h1) {
+    @apply text-[1.6rem] font-[600];
+  }
+
+  &:is(h2) {
+    @apply text-[1.2rem] font-[600];
+  }
+
+  &:is(h3) {
+    @apply text-[1rem] font-[600];
+  }
+
+  &:is(h4) {
+    @apply text-[.8rem] font-[600];
+  }
+
+  &:is(h5), &:is(h6) {
+    @apply text-[.7rem] font-[600];
+  }
+}

@@ -1,0 +1,16 @@
+@import "src/styles/templates";
+
+section.designSystem {
+  @include paddingVertical(var(--p-level-2));
+  @include paddingHorizontal(calc(var(--p-level-2) * 1.40625));
+
+  @apply flex flex-col;
+
+  gap: var(--p-level-1);
+
+  article {
+    @apply flex flex-col;
+
+    gap: var(--p-level-2);
+  }
+}
