@@ -15,6 +15,9 @@ const tailwindConfig: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        accent: '#F4BF00',
+      },
     },
   },
   plugins: [CustomClassesPlugin()],

@@ -1,3 +1,5 @@
+@import "src/styles/templates";
+
 ul, ol {
   &.list {
     // Numbered list
@@ -9,8 +11,31 @@ ul, ol {
 
     // Bulleted list
     &:is(ul) {
+      padding-left: var(--p-level-4);
+
       li {
-        list-style: inside disc;
+        @apply flex items-start;
+
+        &::before {
+          @apply bg-accent;
+
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 8px;
+
+          @include marginVertical(6px);
+        }
+
+        @include endAt($tabletBreakpoint) {
+          &::before {
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+          }
+        }
       }
     }
   }

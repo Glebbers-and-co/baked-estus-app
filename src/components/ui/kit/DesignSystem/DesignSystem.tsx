@@ -17,7 +17,7 @@ const DesignSystem: FC<DesignSystemProps> = () => {
     <UiContainer
       maxWidth={'365px'}
       margin={'0px'}
-      className={cn('bg-red-400', styles.designSystem)}
+      className={cn('', styles.designSystem)}
     >
       <Heading as={'h1'}>Дизайн-система</Heading>
 
