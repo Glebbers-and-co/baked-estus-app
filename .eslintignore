@@ -1,0 +1,19 @@
+**/.next/*
+**/node_modules/*
+**/coverage/*
+**/.github/*
+
+**/__tests__/unit/*
+
+# Ignore declaration files
+**/*.d.ts
+
+# Ignore configs
+.eslintrc.js
+.prettierrc
+.stylelintrc.js
+tsconfig.json
+package.json
+*.md
+*.config.ts
+*.config.js
