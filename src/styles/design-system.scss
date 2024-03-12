@@ -1,0 +1,19 @@
+@mixin p24 {
+  font-size: var(--p1);
+  line-height: 140%;
+}
+
+@mixin p20 {
+  font-size: var(--p2);
+  line-height: 140%;
+}
+
+@mixin p16 {
+  font-size: var(--p3);
+  line-height: 140%;
+}
+
+@mixin p14 {
+  font-size: var(--p4);
+  line-height: 140%;
+}

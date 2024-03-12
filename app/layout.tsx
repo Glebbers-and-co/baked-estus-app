@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { type ReactNode } from 'react';
 
 import CoreLayout from '@/src/components/layout/CoreLayout/CoreLayout';
@@ -8,9 +7,8 @@ import { useEnv } from '@/src/hooks/use-env';
 import { generateStaticMetadata } from '@/src/utils/seo';
 
 import { AppConstants } from './app.constants';
+import './design-system.scss';
 import './globals.scss';
-
-const mainFont = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata(): Promise<Metadata> {
   const env = useEnv();
@@ -40,7 +38,14 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='ru'>
-      <body className={mainFont.className}>
+      <head>
+        <link
+          href='https://fonts.cdnfonts.com/css/futura-pt'
+          rel='stylesheet'
+        />
+      </head>
+
+      <body>
         <Providers>
           <CoreLayout>{children}</CoreLayout>
         </Providers>

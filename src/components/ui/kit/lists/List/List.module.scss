@@ -1,0 +1,57 @@
+@import "src/styles/templates";
+
+ul, ol {
+  &.list {
+    padding-left: var(--p-level-4);
+
+    // Numbered list
+    &:is(ol) {
+      padding-left: calc(var(--p-level-4) * 2);
+
+      li {
+        list-style: outside decimal;
+        padding-left: 8px;
+
+        &::marker {
+          @apply text-accent font-bold;
+        }
+
+        @include endAt($tabletBreakpoint) {
+          padding-left: 4px;
+        }
+      }
+
+      @include endAt($tabletBreakpoint) {
+        padding-left: calc(var(--p-level-4) * 3);
+      }
+    }
+
+    // Bulleted list
+    &:is(ul) {
+      li {
+        @apply flex items-start;
+
+        &::before {
+          @apply bg-accent;
+
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 8px;
+
+          @include marginVertical(6px);
+        }
+
+        @include endAt($tabletBreakpoint) {
+          &::before {
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
