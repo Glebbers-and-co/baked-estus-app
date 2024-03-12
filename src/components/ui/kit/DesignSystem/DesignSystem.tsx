@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { type FC } from 'react';
 
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
+import { BulletedList, InlineLink, ListItem } from '@/src/components/ui/kit';
 import Heading from '@/src/components/ui/kit/Heading/Heading';
 
 import styles from './DesignSystem.module.scss';
@@ -23,7 +24,29 @@ const DesignSystem: FC<DesignSystemProps> = () => {
       <article>
         <Heading as={'h2'}>Отступы</Heading>
 
+        <BulletedList>
+          <ListItem>1 уровень: 56рх</ListItem>
+          <ListItem>2 уровень: 32рх</ListItem>
+          <ListItem>3 уровень: 24рх</ListItem>
+          <ListItem>4 уровень: 16рх</ListItem>
+          <ListItem>5 уровень: 8рх</ListItem>
+        </BulletedList>
+
         <p>В адаптиве все отступы спускаются на уровень ниже</p>
+      </article>
+
+      <article>
+        <Heading as={'h2'}>Текст</Heading>
+
+        <div className={cn(styles.subGroup)}>
+          <div className={cn(styles.part)}>
+            <Heading as={'h3'}>Шрифты</Heading>
+
+            <BulletedList>
+              <ListItem>Основной шрифт - futura pt</ListItem>
+            </BulletedList>
+          </div>
+        </div>
       </article>
     </UiContainer>
   );

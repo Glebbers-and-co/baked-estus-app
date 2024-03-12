@@ -12,5 +12,17 @@ section.designSystem {
     @apply flex flex-col;
 
     gap: var(--p-level-2);
+
+    .subGroup {
+      @apply flex flex-col;
+
+      gap: var(--p-level-3);
+
+      .part {
+        @apply flex flex-col;
+
+        gap: var(--p-level-4);
+      }
+    }
   }
 }
