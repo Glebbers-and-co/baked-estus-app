@@ -3,7 +3,10 @@
 .marker {
   @apply border-primary-font relative;
 
-  $size: 40px;
+  $size: 10px;
+  $vMargins: calc((var(--p2) - $size) / 2);
+
+  @include marginVertical(calc($vMargins * 1.5));
 
   width: $size;
   height: $size;
@@ -12,9 +15,11 @@
   border-width: calc($size * 0.1);
   border-style: solid;
   position: relative;
+  margin-right: var(--p-level-5);
 
   &::before {
-    background: red;
+    @apply bg-primary-font;
+
     content: "";
     position: absolute;
     top: calc($size * 0.1);

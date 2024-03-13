@@ -105,7 +105,7 @@ const DesignSystem: FC<DesignSystemProps> = () => {
       <Article heading={'Компоненты'}>
         <Subgroup>
           <Part heading={'Чекбокс'}>
-            <Checkbox>Text</Checkbox>
+            <Checkbox>Чекбокс</Checkbox>
           </Part>
         </Subgroup>
       </Article>
