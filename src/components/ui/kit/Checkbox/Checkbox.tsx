@@ -15,6 +15,8 @@ const Checkbox: VariableFC<
 
   return (
     <div className={cn('flex select-none', className)}>
+      <div aria-hidden className={cn(styles.marker)}></div>
+
       <input
         type={'checkbox'}
         id={uuid}

@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 :root {
+  @apply text-primary-font;
+
   font-size: 20px;
   font-family: 'Futura PT', sans-serif;
 }

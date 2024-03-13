@@ -17,6 +17,9 @@ const tailwindConfig: Config = {
       },
       colors: {
         accent: '#F4BF00',
+        primary: {
+          font: '#232323',
+        },
       },
     },
   },

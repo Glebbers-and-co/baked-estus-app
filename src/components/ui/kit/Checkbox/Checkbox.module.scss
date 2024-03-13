@@ -1,3 +1,40 @@
+@import "src/styles/templates";
+
+.marker {
+  @apply border-primary-font relative;
+
+  $size: 40px;
+
+  width: $size;
+  height: $size;
+  border-radius: calc($size * 0.2);
+  display: inline-block;
+  border-width: calc($size * 0.1);
+  border-style: solid;
+  position: relative;
+
+  &::before {
+    background: red;
+    content: "";
+    position: absolute;
+    top: calc($size * 0.1);
+    left: calc($size * 0.1);
+    width: calc(100% - $size * 0.2);
+    height: calc(100% - $size * 0.2);
+    border-radius: calc($size * 0.1);
+    opacity: 0;
+    transition: .08s ease;
+  }
+
+  &:has(+ input.checkboxMarker:checked) {
+    &::before {
+     opacity: 1;
+    }
+  }
+}
+
 input.checkboxMarker {
-  background: red;
+  @include appearance(none);
+
+  @apply relative;
 }
