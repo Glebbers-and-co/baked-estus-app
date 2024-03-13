@@ -1,34 +1,33 @@
 /**
+ * Wrap rule in error severity.
+ * @param {any} value
+ * @return {[any,{severity: string}]}
+ */
+const wrapWithError = value => {
+  return [
+    value,
+    {
+      severity: 'error',
+    },
+  ];
+};
+
+/**
  * Rule for pattern names (like, class selector names etc.)
  * @type {[string,{severity: string}]}
  */
-const CAMEL_CASE = [
-  '^(([a-z]+[A-Z]+\\w+)|([a-z]+\\w+))+$',
-  {
-    severity: 'error',
-  },
-];
-
-/**
- * Create rule with error severity.
- * @type {[boolean,{severity: string}]}
- */
-const WITH_ERROR = [
-  true,
-  {
-    severity: 'error',
-  },
-];
+const CAMEL_CASE = wrapWithError('^(([a-z]+[A-Z]+\\w+)|([a-z]+\\w+))+$');
 
 module.exports = {
   rules: {
-    'block-no-empty': WITH_ERROR,
+    'block-no-empty': wrapWithError(true),
     'property-no-vendor-prefix': null,
 
-    'declaration-block-no-duplicate-properties': WITH_ERROR,
-    'no-duplicate-selectors': WITH_ERROR,
-    'comment-no-empty': WITH_ERROR,
-    'declaration-no-important': WITH_ERROR,
+    'declaration-block-no-duplicate-properties': wrapWithError(true),
+    'no-duplicate-selectors': wrapWithError(true),
+    'comment-no-empty': wrapWithError(true),
+    'declaration-no-important': wrapWithError(true),
+    'selector-pseudo-element-colon-notation': wrapWithError('double'),
 
     'selector-class-pattern': CAMEL_CASE,
     'scss/at-function-pattern': CAMEL_CASE,
