@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import { useUniqueId } from '@/src/hooks/useUniqueId';
 
+import styles from './Checkbox.module.scss';
 import { type CheckboxProps } from './Checkbox.props';
 
 const Checkbox: VariableFC<
@@ -17,7 +18,7 @@ const Checkbox: VariableFC<
       <input
         type={'checkbox'}
         id={uuid}
-        className={cn('inline-block w-max')}
+        className={cn('inline-block w-max', styles.checkboxMarker)}
         {...props}
       />
 
