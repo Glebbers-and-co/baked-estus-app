@@ -6,7 +6,11 @@
   $size: 10px;
   $vMargins: calc((var(--p2) - $size) / 2);
 
-  @include marginVertical(calc($vMargins * 1.5));
+  @include marginVertical(calc($vMargins));
+
+  @include endAt($tabletBreakpoint) {
+    @include marginVertical(calc($vMargins * 1.5));
+  }
 
   width: $size;
   height: $size;
