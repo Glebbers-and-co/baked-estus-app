@@ -3,7 +3,12 @@ import cn from 'classnames';
 import { type FC } from 'react';
 
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
-import { BulletedList, ListItem, NumberedList } from '@/src/components/ui/kit';
+import {
+  BulletedList,
+  Checkbox,
+  ListItem,
+  NumberedList,
+} from '@/src/components/ui/kit';
 import Heading from '@/src/components/ui/kit/Heading/Heading';
 
 import styles from './DesignSystem.module.scss';
@@ -99,7 +104,9 @@ const DesignSystem: FC<DesignSystemProps> = () => {
 
       <Article heading={'Компоненты'}>
         <Subgroup>
-          <Part heading={'Чекбокс'}>Сас</Part>
+          <Part heading={'Чекбокс'}>
+            <Checkbox>Text</Checkbox>
+          </Part>
         </Subgroup>
       </Article>
     </UiContainer>
