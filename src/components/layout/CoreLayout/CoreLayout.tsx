@@ -1,4 +1,5 @@
 import { type PropsWith } from '@xenopomp/advanced-types';
+import cn from 'classnames';
 import { type FC } from 'react';
 
 import Footer from '@/src/components/layout/Footer/Footer';

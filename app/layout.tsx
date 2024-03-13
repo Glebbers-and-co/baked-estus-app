@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import type { Metadata } from 'next';
 import { type ReactNode } from 'react';
 
@@ -45,7 +46,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
 
-      <body>
+      <body
+        className={cn('flex flex-col [&>main]:flex-grow')}
+        style={{
+          minHeight: '100dvh',
+        }}
+      >
         <Providers>
           <CoreLayout>{children}</CoreLayout>
         </Providers>

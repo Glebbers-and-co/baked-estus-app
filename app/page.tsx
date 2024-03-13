@@ -14,6 +14,8 @@ export default function Home() {
   return (
     <main className={cn(styles.mainPage)}>
       <UiContainer>index page</UiContainer>
+
+      {/* <DesignSystem /> */}
     </main>
   );
 }

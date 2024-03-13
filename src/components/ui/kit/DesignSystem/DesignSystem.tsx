@@ -1,3 +1,4 @@
+import { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { type FC } from 'react';
 
@@ -7,6 +8,44 @@ import Heading from '@/src/components/ui/kit/Heading/Heading';
 
 import styles from './DesignSystem.module.scss';
 import type { DesignSystemProps } from './DesignSystem.props';
+
+const Subgroup: VariableFC<'div'> = ({ className, children, ...props }) => {
+  return (
+    <div className={cn(styles.subGroup, className)} {...props}>
+      {children}
+    </div>
+  );
+};
+
+const Part: VariableFC<'div', { heading?: string }> = ({
+  className,
+  children,
+  heading,
+  ...props
+}) => {
+  return (
+    <div className={cn(styles.part, className)} {...props}>
+      {heading && <Heading as={'h3'}>{heading}</Heading>}
+
+      {children}
+    </div>
+  );
+};
+
+const Article: VariableFC<'div', { heading?: string }> = ({
+  className,
+  children,
+  heading,
+  ...props
+}) => {
+  return (
+    <article className={cn(className)} {...props}>
+      {heading && <Heading as={'h2'}>{heading}</Heading>}
+
+      {children}
+    </article>
+  );
+};
 
 /**
  * This component only exists to introduce design system.
@@ -21,9 +60,7 @@ const DesignSystem: FC<DesignSystemProps> = () => {
     >
       <Heading as={'h1'}>Дизайн-система</Heading>
 
-      <article>
-        <Heading as={'h2'}>Отступы</Heading>
-
+      <Article heading={'Отступы'}>
         <BulletedList>
           <ListItem>1 уровень: 56рх</ListItem>
           <ListItem>2 уровень: 32рх</ListItem>
@@ -33,26 +70,20 @@ const DesignSystem: FC<DesignSystemProps> = () => {
         </BulletedList>
 
         <p>В адаптиве все отступы спускаются на уровень ниже</p>
-      </article>
+      </Article>
 
-      <article>
-        <Heading as={'h2'}>Списки</Heading>
-
-        <div className={cn(styles.subGroup)}>
-          <div className={cn(styles.part)}>
-            <Heading as={'h3'}>Маркерованный</Heading>
-
+      <Article heading={'Списки'}>
+        <Subgroup>
+          <Part heading={'Маркерованный'}>
             <BulletedList>
               <ListItem>Маркера контрастного цвета</ListItem>
               <ListItem>10 пикселей диаметр</ListItem>
               <ListItem>Отступ от маркера 8 пикселей</ListItem>
               <ListItem>Отступ от абзаца 16 пикселей</ListItem>
             </BulletedList>
-          </div>
+          </Part>
 
-          <div className={cn(styles.part)}>
-            <Heading as={'h3'}>Нумерованный</Heading>
-
+          <Part heading={'Нумерованный'}>
             <NumberedList>
               <ListItem>Номер вынесен</ListItem>
               <ListItem>Номер обернут блоком 20 рх</ListItem>
@@ -62,9 +93,15 @@ const DesignSystem: FC<DesignSystemProps> = () => {
               <ListItem>Отступ от номера 8 пикселей</ListItem>
               <ListItem>Отступ от абзаца 16 пикселей</ListItem>
             </NumberedList>
-          </div>
-        </div>
-      </article>
+          </Part>
+        </Subgroup>
+      </Article>
+
+      <Article heading={'Компоненты'}>
+        <Subgroup>
+          <Part heading={'Чекбокс'}>Сас</Part>
+        </Subgroup>
+      </Article>
     </UiContainer>
   );
 };
