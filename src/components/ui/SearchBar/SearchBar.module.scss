@@ -1,0 +1,35 @@
+@import "src/styles/templates";
+
+section.searchBar {
+  @apply flex-grow border-primary-font flex items-center;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--p-level-5);
+
+  input.search {
+    @include paddingHorizontal(var(--p-level-4));
+    @include p14;
+
+    @apply flex-grow border-none outline-none
+           h-full;
+
+    background: transparent;
+
+    &::placeholder {
+      @apply text-primary-font/40;
+    }
+  }
+
+  button.control {
+    @include paddingHorizontal(var(--p-level-4));
+
+    @apply h-[37px];
+
+    &.withSeparator {
+      border-color: inherit;
+      border-left-width: 1px;
+      border-left-style: solid;
+    }
+  }
+}
