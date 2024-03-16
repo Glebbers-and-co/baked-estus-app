@@ -8,7 +8,7 @@ import type { FooterProps } from './Footer.props';
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <footer className={cn(styles.appFooter)}>
+    <footer className={cn(styles.appFooter, 'sticky bottom-0 bg-primary-bg')}>
       <UiContainer>Footer</UiContainer>
     </footer>
   );
