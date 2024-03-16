@@ -10,6 +10,7 @@ import { generateStaticMetadata } from '@/src/utils/seo';
 import { AppConstants } from './app.constants';
 import './design-system.scss';
 import './globals.scss';
+import styles from './layout.module.scss';
 
 export async function generateMetadata(): Promise<Metadata> {
   const env = useEnv();
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
 
       <body
-        className={cn('flex flex-col [&>main]:flex-grow')}
+        className={cn('flex flex-col [&>main]:flex-grow', styles.layout)}
         style={{
           minHeight: '100dvh',
         }}

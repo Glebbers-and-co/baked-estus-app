@@ -3,6 +3,7 @@ import { type FC } from 'react';
 
 import { AppConstants } from '@/app/app.constants';
 import Logo from '@/src/components/ui/Logo/Logo';
+import SearchBar from '@/src/components/ui/SearchBar/SearchBar';
 import TopNav from '@/src/components/ui/TopNav/TopNav';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 
@@ -21,9 +22,7 @@ const Header: FC<HeaderProps> = () => {
       >
         <Logo />
 
-        <section className={cn('flex-grow bg-red-400/25 flex-center h-[37px]')}>
-          Здесь будет поиск
-        </section>
+        <SearchBar />
 
         <TopNav />
       </UiContainer>

@@ -1,0 +1,7 @@
+@import "src/styles/templates";
+
+body.layout {
+  main {
+    @include paddingVertical(var(--p-level-2));
+  }
+}

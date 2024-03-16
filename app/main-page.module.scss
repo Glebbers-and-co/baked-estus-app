@@ -1,1 +1,23 @@
 @import "src/styles/templates";
+
+main.mainPage {
+  .container {
+    --cols: 5;
+
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: var(--p-level-3);
+
+    @include endAt($tabletBreakpoint) {
+      --cols: 3;
+    }
+
+    @include endAt(xslg) {
+      --cols: 2;
+    }
+
+    @include endAt(md) {
+      --cols: 1;
+    }
+  }
+}

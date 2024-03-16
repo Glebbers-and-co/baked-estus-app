@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import { type Metadata } from 'next';
+import { type ReactNode } from 'react';
 
+import ProductCard from '@/src/components/ui/ProductCard/ProductCard';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 import { generateStaticMetadata } from '@/src/utils/seo';
 
@@ -11,7 +13,15 @@ export const metadata: Metadata = generateStaticMetadata({});
 export default function Home() {
   return (
     <main className={cn(styles.mainPage)}>
-      <UiContainer>index page</UiContainer>
+      <UiContainer className={cn(styles.container)}>
+        {Array.from<ReactNode>({ length: 12 }).fill(
+          <ProductCard
+            price={500}
+            discount={200}
+            heading={'Пирожок жесть крутой'}
+          />,
+        )}
+      </UiContainer>
     </main>
   );
 }

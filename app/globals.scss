@@ -14,9 +14,9 @@
 * {
   @include p16;
 
-  @apply font-medium;
+  @apply font-medium ;
 }
 
 body {
-  @apply bg-primary-bg;
+  @apply bg-primary-bg overflow-x-hidden;
 }
