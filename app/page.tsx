@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { type Metadata } from 'next';
+import { ReactNode } from 'react';
 
 import ProductCard from '@/src/components/ui/ProductCard/ProductCard';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
@@ -13,8 +14,13 @@ export default function Home() {
   return (
     <main className={cn(styles.mainPage)}>
       <UiContainer className={cn(styles.container)}>
-        <ProductCard price={100} heading={'Sus'} />
-        <ProductCard price={152} discount={50} />
+        {Array.from<ReactNode>({ length: 12 }).fill(
+          <ProductCard
+            price={500}
+            discount={200}
+            heading={'Пирожок жесть крутой'}
+          />,
+        )}
       </UiContainer>
     </main>
   );
