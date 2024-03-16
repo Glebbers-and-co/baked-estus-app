@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { type FC } from 'react';
 
 import { AppConstants } from '@/app/app.constants';
+import Logo from '@/src/components/ui/Logo/Logo';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 
 import styles from './Header.module.scss';
@@ -17,7 +18,7 @@ const Header: FC<HeaderProps> = () => {
         className={cn(styles.container)}
         as={'div'}
       >
-        <div>Header</div>
+        <Logo />
       </UiContainer>
     </header>
   );

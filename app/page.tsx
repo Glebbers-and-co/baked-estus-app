@@ -6,9 +6,7 @@ import { generateStaticMetadata } from '@/src/utils/seo';
 
 import styles from './main-page.module.scss';
 
-export const metadata: Metadata = generateStaticMetadata({
-  title: 'Main',
-});
+export const metadata: Metadata = generateStaticMetadata({});
 
 export default function Home() {
   return (
