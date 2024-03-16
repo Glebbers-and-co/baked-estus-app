@@ -7,7 +7,7 @@ import type { HeaderProps } from './Header.props';
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <header className={cn('sticky top-0 bg-primary-bg')}>
+    <header className={cn('sticky top-0 bg-primary-bg with-shadow')}>
       <UiContainer>Header</UiContainer>
     </header>
   );

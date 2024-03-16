@@ -14,6 +14,10 @@ export const CustomClassesPlugin = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }),
+
+      '.with-shadow': cssPropertiesToTw({
+        filter: 'drop-shadow(0px 0px 24px rgb(0 0 0 / .24))',
+      }),
     });
   });
 };

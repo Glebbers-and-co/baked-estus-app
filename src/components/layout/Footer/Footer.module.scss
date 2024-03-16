@@ -1,1 +1,7 @@
+@import "src/styles/templates";
 
+footer.appFooter {
+  .container {
+    @include paddingVertical(var(--p-level-4));
+  }
+}
