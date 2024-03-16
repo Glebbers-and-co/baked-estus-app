@@ -1,0 +1,11 @@
+@import "src/styles/templates";
+
+header.appHeader {
+  @include paddingVertical(var(--p-level-5));
+
+  .container {
+    @apply flex;
+
+    gap: var(--p-level-3);
+  }
+}
