@@ -23,7 +23,7 @@ const Logo: VariableFC<typeof Link, LogoProps, 'href' | 'children'> = ({
       <Image
         src={logoImg}
         alt={'Logotype'}
-        className={cn('size-[32px]')}
+        className={cn('size-[32px] rounded-[50%] scale-y-[-1]')}
         width={31}
         height={33}
       />
