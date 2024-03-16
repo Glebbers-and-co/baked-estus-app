@@ -1,6 +1,8 @@
 import { type VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 
+import { Find, Sliders } from '@/src/components/ui/icons';
+
 import styles from './SearchBar.module.scss';
 import type { SearchBarProps } from './SearchBar.props';
 
@@ -35,8 +37,13 @@ const SearchBar: VariableFC<'section', SearchBarProps, 'children'> = ({
         placeholder={'Найти пирожок своей мечты'}
       />
 
-      <ControlButton>Sus</ControlButton>
-      <ControlButton withSeparator>Sus</ControlButton>
+      <ControlButton>
+        <Sliders className={cn('size-[16px]')} />
+      </ControlButton>
+
+      <ControlButton withSeparator>
+        <Find className={cn('size-[16px]')} />
+      </ControlButton>
     </section>
   );
 };
