@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { type Metadata } from 'next';
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 import ProductCard from '@/src/components/ui/ProductCard/ProductCard';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
