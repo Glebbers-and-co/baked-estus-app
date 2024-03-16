@@ -5,7 +5,7 @@ a.navItem {
   @include paddingVertical(calc(var(--p-level-5) * .5));
   @include p14;
 
-  @apply bg-red-600/25 flex flex-col;
+  @apply flex flex-col items-center;
 
   gap: calc(var(--p-level-5) * .5);
 }

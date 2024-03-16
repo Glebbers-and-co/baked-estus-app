@@ -2,6 +2,8 @@ import { type VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Link from 'next/link';
 
+import { Bookmarks, Cart, History } from '@/src/components/ui/icons';
+
 import styles from './TopNav.module.scss';
 import type { TopNavItemProps, TopNavProps } from './TopNav.props';
 
@@ -27,13 +29,20 @@ const TopNav: VariableFC<'nav', TopNavProps, 'children'> = ({
   return (
     <nav className={cn(styles.topNavbar, className)} {...props}>
       <ul>
-        <NavItem href={'/'}>Fav</NavItem>
-
-        <NavItem href={'/'} disabled>
-          History
+        <NavItem href={'/'}>
+          <Bookmarks className={cn('size-[1.715em]')} />
+          Избранное
         </NavItem>
 
-        <NavItem href={'/'}>Cart</NavItem>
+        <NavItem href={'/'} disabled>
+          <History className={cn('size-[1.715em]')} />
+          История
+        </NavItem>
+
+        <NavItem href={'/'}>
+          <Cart className={cn('size-[1.715em]')} />
+          Корзина
+        </NavItem>
       </ul>
     </nav>
   );
