@@ -1,0 +1,32 @@
+@import "src/styles/templates";
+
+article.card {
+  @apply flex flex-col;
+
+  gap: var(--p-level-4);
+
+  header {
+    @apply flex flex-col;
+
+    gap: var(--p-level-5);
+
+    img.preview {
+      aspect-ratio: 178/157;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--p-level-5);
+    }
+
+    section.price {
+      @apply flex items-end;
+
+      gap: var(--p-level-5);
+
+      aside.discountlessPrice {
+        @include p14;
+
+        @apply opacity-40 line-through;
+      }
+    }
+  }
+}
