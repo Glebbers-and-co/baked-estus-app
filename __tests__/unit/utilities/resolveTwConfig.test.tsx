@@ -1,13 +1,10 @@
-import { describe, expect, test } from "vitest";
-import { resolveTwConfig } from "@/src/utils/other";
-import { testObject } from "@/__tests__/assets/utilities";
+import { describe, expect, test } from 'vitest';
 
-describe("функция resolveTwConfig", () => {
-  test("Конфиг возвращается", () => {
+import { testObject } from '@/__tests__/assets/utilities';
+import { resolveTwConfig } from '@/src/utils/other';
 
-    const result = resolveTwConfig();
-
-    testObject(result);
+describe('resolveTwConfig func', () => {
+  test('It returns', () => {
+    testObject(resolveTwConfig());
   });
 });
-
