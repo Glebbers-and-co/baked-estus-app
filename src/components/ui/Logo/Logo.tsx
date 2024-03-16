@@ -20,7 +20,13 @@ const Logo: VariableFC<typeof Link, LogoProps, 'href' | 'children'> = ({
       className={cn('flex items-center', styles.logo, className)}
       {...props}
     >
-      <Image src={logoImg} alt={'Logotype'} className={cn('size-[32px]')} />
+      <Image
+        src={logoImg}
+        alt={'Logotype'}
+        className={cn('size-[32px]')}
+        width={31}
+        height={33}
+      />
 
       <Heading as={'h4'}>{AppConstants.appName}</Heading>
     </Link>
