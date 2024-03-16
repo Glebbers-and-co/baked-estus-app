@@ -4,7 +4,7 @@ header.appHeader {
   @include paddingVertical(var(--p-level-5));
 
   .container {
-    @apply flex;
+    @apply flex items-center;
 
     gap: var(--p-level-3);
   }

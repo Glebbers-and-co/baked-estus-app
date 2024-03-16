@@ -19,6 +19,10 @@ const Header: FC<HeaderProps> = () => {
         as={'div'}
       >
         <Logo />
+
+        <section className={cn('flex-grow bg-red-400/25 flex-center h-[37px]')}>
+          Здесь будет поиск
+        </section>
       </UiContainer>
     </header>
   );
