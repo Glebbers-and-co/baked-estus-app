@@ -1,0 +1,22 @@
+@import "src/styles/templates";
+
+a.navItem {
+  @include paddingHorizontal(var(--p-level-5));
+  @include paddingVertical(calc(var(--p-level-5) * .5));
+
+  @apply bg-red-600/25 flex flex-col;
+
+  gap: calc(var(--p-level-5) * .5);
+}
+
+nav.topNavbar {
+  @apply flex;
+
+  gap: inherit;
+
+  ul {
+    @apply flex items-center;
+
+    gap: inherit;
+  }
+}
