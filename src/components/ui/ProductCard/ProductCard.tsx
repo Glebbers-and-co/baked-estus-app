@@ -47,6 +47,8 @@ const ProductCard: VariableFC<'article', ProductCardProps, 'children'> = ({
           src={mockImage}
           alt={'Mock image'}
           className={cn(styles.preview)}
+          width={1000}
+          height={1000}
         />
 
         <Price price={price} discount={discount} />
