@@ -1,4 +1,4 @@
-import { VariableFC } from '@xenopomp/advanced-types';
+import type { VariableFC } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import { type FC } from 'react';
 
