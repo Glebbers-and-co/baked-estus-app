@@ -30,17 +30,17 @@ const TopNav: VariableFC<'nav', TopNavProps, 'children'> = ({
     <nav className={cn(styles.topNavbar, className)} {...props}>
       <ul>
         <NavItem href={'/'}>
-          <Bookmarks className={cn('size-[1.715em]')} />
+          <Bookmarks className={cn('size-[1.5em]')} />
           Избранное
         </NavItem>
 
         <NavItem href={'/'} disabled>
-          <History className={cn('size-[1.715em]')} />
+          <History className={cn('size-[1.5em]')} />
           История
         </NavItem>
 
         <NavItem href={'/'}>
-          <Cart className={cn('size-[1.715em]')} />
+          <Cart className={cn('size-[1.5em]')} />
           Корзина
         </NavItem>
       </ul>
